@@ -2,7 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader'
 import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar'
+import Divider from '@material-ui/core/Divider'
   
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -12,9 +15,9 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
       '& > *': {
         margin: theme.spacing(2),
-        width: theme.spacing(20),
-        height: theme.spacing(20),
-      },
+        width: theme.spacing(24),
+        height: theme.spacing(24),
+      }
     }
 }));
 
@@ -45,11 +48,13 @@ Color scheme was created by colorswall
     return (
       <div className={classes.root}>
         <Paper style={{background : colour }}  elevation={3}>
-            <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                    {props.name}
-                </Typography>
-                <Typography color="textPrimary" gutterBottom>
+          <CardHeader
+            avatar={<Avatar>{props.iso}</Avatar>}
+                title={props.name}
+          />
+          <Divider />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" gutterBottom>
                     Population : {props.population}
                 </Typography>
                 <Typography color="textPrimary" gutterBottom>

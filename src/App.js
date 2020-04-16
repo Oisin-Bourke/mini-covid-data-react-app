@@ -49,7 +49,8 @@ class App extends Component {
            <div>
       <Grid container spacing={4}>
         <Grid item xs={4}>
-        <Country 
+        <Country
+            iso='I'
             name={'Ireland'} 
             population = {irelandPopulation} 
             deaths={dataIreland.Deaths} 
@@ -57,7 +58,8 @@ class App extends Component {
           />  
         </Grid>
         <Grid item xs={4}>
-        <Country 
+        <Country
+            iso='E' 
             name={'England'} 
             population = {englandPopulation} 
             deaths={dataUK.englandDeceased} 
@@ -65,7 +67,8 @@ class App extends Component {
           />  
         </Grid>
         <Grid item xs={4}>
-        <Country 
+        <Country
+            iso = 'US' 
             name={'United States'} 
             population = {usPopulation} 
             deaths={dataUS.deaths} 
@@ -73,7 +76,8 @@ class App extends Component {
           /> 
         </Grid>
         <Grid item xs={4}>
-        <Country 
+        <Country
+            iso = 'NI' 
             name={'Northern Ireland'} 
             population = {northenIrelandPopulation} 
             deaths={dataUK.northenIrelandDeceased} 
@@ -81,7 +85,8 @@ class App extends Component {
           />  
         </Grid>
         <Grid item xs={4}>
-        <Country 
+        <Country
+            iso = 'UK' 
             name={'United Kingdom'} 
             population = {ukPopulation} 
             deaths={dataUK.deceased} 
@@ -89,7 +94,8 @@ class App extends Component {
           />
         </Grid>
         <Grid item xs={4}>
-        <Country 
+        <Country
+            iso = 'DK' 
             name={'Denmark'} 
             population = {denmarkPopulation} 
             deaths={dataDenmark.deaths} 
