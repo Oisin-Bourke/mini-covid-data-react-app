@@ -40,8 +40,13 @@ Color scheme was created by colorswall
     colour = '#ffddb3'
   } else if(props.percentage >= .02 & props.percentage < .025){
     colour = '#ffd199'
-  }
-  else {
+  } else if(props.percentage >= .025 & props.percentage < .030){
+    colour = '#ffc680'
+  } else if(props.percentage >= .030 & props.percentage < .035){
+    colour = '#ffba66'
+  } else if(props.percentage >= .035 & props.percentage < .040){
+    colour = '#ffaf4d'
+  } else {
     colour = '#fafafa'
   }
 
