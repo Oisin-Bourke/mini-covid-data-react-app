@@ -10,6 +10,7 @@ class App extends Component {
     dataUK : {},
     dataIreland : {},
     dataUS : {},
+    dataDenmark : {},
     isLoaded : false
   }
 
@@ -17,6 +18,7 @@ class App extends Component {
     this.fetchIrelandData()
     this.fetchUKData()
     this.fetchUSData()
+    this.fetchDenmarkData()
   }
 
   render() {
@@ -25,14 +27,16 @@ class App extends Component {
     const englandPopulation = 55670000
     const ukPopulation = 66650000
     const usPopulation = 328200000
+    const denmarkPopulation = 5806000
     
-    const { error, isLoaded, dataUK, dataIreland, dataUS } = this.state;
+    const { error, isLoaded, dataUK, dataIreland, dataUS, dataDenmark } = this.state;
 
     const irelandPercent = dataIreland.Deaths * (100 / irelandPopulation)
     const northernIrelandPercent = dataUK.northenIrelandDeceased * (100 / northenIrelandPopulation)
     const englandPercent = dataUK.englandDeceased * (100 / englandPopulation)
     const ukPercent = dataUK.deceased * (100 / ukPopulation)
     const usPercent = dataUS.deaths * (100 / usPopulation)
+    const denmarkPercent = dataDenmark.deaths * (100 / denmarkPopulation)
     
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -70,7 +74,7 @@ class App extends Component {
         </Grid>
         <Grid item xs={4}>
         <Country 
-            name={' Northern Ireland'} 
+            name={'Northern Ireland'} 
             population = {northenIrelandPopulation} 
             deaths={dataUK.northenIrelandDeceased} 
             percentage={northernIrelandPercent.toFixed(4)}
@@ -86,10 +90,10 @@ class App extends Component {
         </Grid>
         <Grid item xs={4}>
         <Country 
-            name={'United States'} 
-            population = {usPopulation} 
-            deaths={dataUS.deaths} 
-            percentage={usPercent.toFixed(4)}
+            name={'Denmark'} 
+            population = {denmarkPopulation} 
+            deaths={dataDenmark.deaths} 
+            percentage={denmarkPercent.toFixed(4)}
           /> 
         </Grid>
         
@@ -149,6 +153,26 @@ class App extends Component {
           this.setState({
             isLoaded: true,
             dataUS: data 
+          });
+        },
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+    )
+  }
+
+  fetchDenmarkData = () => {
+    fetch("https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest?iso2=DK")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          const data = result[result.length -1] 
+          this.setState({
+            isLoaded: true,
+            dataDenmark: data 
           });
         },
         (error) => {
