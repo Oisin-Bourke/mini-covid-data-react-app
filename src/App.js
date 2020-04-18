@@ -48,7 +48,7 @@ class App extends Component {
           <h1>Covid-19 Data</h1>
            <div>
       <Grid container spacing={4}>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
         <Country
             iso='I'
             name={'Ireland'} 
@@ -57,7 +57,7 @@ class App extends Component {
             percentage={irelandPercent.toFixed(4)}
           />  
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
         <Country
             iso='E' 
             name={'England'} 
@@ -66,7 +66,7 @@ class App extends Component {
             percentage={englandPercent.toFixed(4)}
           />  
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
         <Country
             iso = 'US' 
             name={'United States'} 
@@ -75,7 +75,7 @@ class App extends Component {
             percentage={usPercent.toFixed(4)}
           /> 
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
         <Country
             iso = 'NI' 
             name={'Northern Ireland'} 
@@ -84,7 +84,7 @@ class App extends Component {
             percentage={northernIrelandPercent.toFixed(4)}
           />  
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
         <Country
             iso = 'UK' 
             name={'United Kingdom'} 
@@ -93,7 +93,7 @@ class App extends Component {
             percentage={ukPercent.toFixed(4)}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
         <Country
             iso = 'DK' 
             name={'Denmark'} 
