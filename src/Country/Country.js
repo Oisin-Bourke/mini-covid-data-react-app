@@ -46,6 +46,12 @@ Color scheme was created by colorswall
     colour = '#ffba66'
   } else if(props.percentage >= .035 & props.percentage < .040){
     colour = '#ffaf4d'
+  } else if(props.percentage >= .040 & props.percentage < .045){
+    colour = '#ffa333'
+  } else if(props.percentage >= .045 & props.percentage < .050){
+    colour = '#ff9819'
+  } else if(props.percentage >= .050 & props.percentage < .055){
+    colour = '#ff8c00'
   } else  {
     colour = '#fafafa'
   }
