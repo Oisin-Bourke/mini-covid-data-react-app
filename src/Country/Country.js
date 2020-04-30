@@ -25,6 +25,7 @@ export default function Country(props){
   const classes = useStyles();
 
   /*
+  This changed :)
   Palette Tints of Dark Orange #FF8C00 hex color has 10 HEX, RGB codes colors:
 HEX: #ff8c00 RGB: (255, 140, 0), HEX: #ff9819 RGB: (255, 152, 25), HEX: #ffa333 RGB: (255, 163, 51), HEX: #ffaf4d RGB: (255, 175, 77), HEX: #ffba66 RGB: (255, 186, 102), HEX: #ffc680 RGB: (255, 198, 128), HEX: #ffd199 RGB: (255, 209, 153), HEX: #ffddb3 RGB: (255, 221, 179), HEX: #ffe8cc RGB: (255, 232, 204), HEX: #fff4e6 RGB: (255, 244, 230).
 Color scheme was created by colorswall
