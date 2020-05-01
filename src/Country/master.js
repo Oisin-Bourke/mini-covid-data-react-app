@@ -1,12 +1,10 @@
 /*
-master commits
+Create conflict ??
+*/
 */
 /*
-master commits
+master commits ===> create conflicts here!!
 */
 /*
-master commits
-*/
-/*
-master commits
+Create conflict ??
 */
